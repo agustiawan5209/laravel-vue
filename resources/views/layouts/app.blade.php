@@ -17,20 +17,58 @@
 
     <title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite([ 'resources/js/app.js'])
 </head>
 
 <body>
     <div id="app" class="wrapper">
-        <content-component></content-component>
+        <sidebar-component></sidebar-component>
+       <div class="main">
+        <navbar-component></navbar-component>
+        <main class="content">
+            <div class="container-fluid p-0">
+                <content-component></content-component>
+            </div>
+        </main>
 
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-start">
+                        <p class="mb-0">
+                            <a class="text-muted" href="https://adminkit.io/"
+                                target="_blank"><strong>AdminKit</strong></a> - <a class="text-muted"
+                                href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin
+                                    Template</strong></a> &copy;
+                        </p>
+                    </div>
+                    <div class="col-6 text-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+       </div>
     </div>
     {{-- <script src="js/app.js"></script> --}}
 
     {{-- <script src="js/app.js"></script> --}}
-
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.esm.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
@@ -255,7 +293,8 @@
                 defaultDate: defaultDate
             });
         });
-    </script>
+    </script> --}}
 
 </body>
+
 </html>

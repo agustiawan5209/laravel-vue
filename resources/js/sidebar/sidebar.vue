@@ -11,15 +11,15 @@
                 </li>
 
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" href="index.html">
+                    <router-link class="sidebar-link" to="home">
                         <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="pages-profile.html">
-                        <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-                    </a>
+                    <router-link to="about" class="sidebar-link">
+                        <i class="align-middle" data-feather="user"></i> <span class="align-middle">About</span>
+                    </router-link>
                 </li>
 
                 <li class="sidebar-item">
